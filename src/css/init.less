@@ -1,0 +1,35 @@
+*:focus {
+    outline: none;
+}
+
+.container {
+	max-width: 1235px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 33px;
+	padding-right: 33px;
+}
+
+@media screen and (max-width: 770px) {
+	.container {
+
+	}
+}
+
+body {
+	min-width: @320;
+	color: #0A1B1A;
+	text-align: left;
+	.regular();
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+.pull-right {
+	float: right;
+}
+
+.hidden {
+	display: none;
+}
