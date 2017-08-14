@@ -18,6 +18,7 @@ var base64 = require('gulp-base64');
 var cleanCSS = require('gulp-clean-css');
 var NpmImportPlugin = require("less-plugin-npm-import");
 var npmImport = new NpmImportPlugin();
+var pxtorem = require('postcss-pxtorem');
 
 var path = {
 	src: 'src/',
@@ -73,6 +74,15 @@ gulp.task('less', ['images'], function() {
 		.pipe(postcss([
 			autoprefixer({
 				browsers: ['last 2 versions']
+			}),
+			pxtorem({
+				rootValue: 16,
+				unitPrecision: 5,
+				propList: ['*'],
+				selectorBlackList: [],
+				replace: true,
+				mediaQuery: true,
+				minPixelValue: 0
 			})
 		]))
 		.pipe(cleanCSS({

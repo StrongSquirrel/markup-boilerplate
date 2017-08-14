@@ -29,8 +29,11 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "jquery": "^1.12.4",
-    "node-notifier": "^5.1.2",
     "less-plugin-npm-import": "^2.1.0",
+    "node-notifier": "^5.1.2",
     "normalize.css": "^7.0.0"
+  },
+  "dependencies": {
+    "postcss-pxtorem": "^4.0.1"
   }
 }
