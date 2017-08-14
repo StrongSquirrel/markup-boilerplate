@@ -307,6 +307,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
+bluebird@^3.0.5:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
+
 body-parser@~1.13.3:
   version "1.13.3"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.13.3.tgz#c08cf330c3358e151016a05746f13f029c97fa97"
@@ -411,6 +415,15 @@ bytes@2.2.0:
 bytes@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.4.0.tgz#7d97196f9d5baf7f6935e25985549edd2a6c2339"
+
+cache-swap@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/cache-swap/-/cache-swap-0.3.0.tgz#1c541aa108a50106f630bdd98fe1dec8ba133f51"
+  dependencies:
+    graceful-fs "^4.1.2"
+    mkdirp "^0.5.1"
+    object-assign "^4.0.1"
+    rimraf "^2.4.0"
 
 camelcase-keys@^2.0.0:
   version "2.1.0"
@@ -1592,6 +1605,20 @@ gulp-base64@^0.1.3:
     request "~2.33.0"
     through2 "~0.4.1"
 
+gulp-cache@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/gulp-cache/-/gulp-cache-0.4.6.tgz#2d03b52db4f6a553ae1d5bef01e483e907e9f796"
+  dependencies:
+    bluebird "^3.0.5"
+    cache-swap "^0.3.0"
+    gulp-util "^3.0.7"
+    object-assign "^4.0.1"
+    object.omit "^2.0.0"
+    object.pick "^1.1.1"
+    readable-stream "^2.0.4"
+    try-json-parse "^0.1.1"
+    vinyl "^1.1.0"
+
 gulp-clean-css@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/gulp-clean-css/-/gulp-clean-css-3.7.0.tgz#54b33526dc899930949fb37b4cacf851c5d5d93b"
@@ -2219,7 +2246,7 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
 
-isobject@^2.0.0:
+isobject@^2.0.0, isobject@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
   dependencies:
@@ -2979,6 +3006,12 @@ object.omit@^2.0.0:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
 
+object.pick@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/object.pick/-/object.pick-1.2.0.tgz#b5392bee9782da6d9fb7d6afaf539779f1234c2b"
+  dependencies:
+    isobject "^2.1.0"
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -3519,7 +3552,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.4.0, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
@@ -4030,6 +4063,10 @@ trim-repeated@^1.0.0:
   resolved "https://registry.yarnpkg.com/trim-repeated/-/trim-repeated-1.0.0.tgz#e3646a2ea4e891312bf7eace6cfb05380bc01c21"
   dependencies:
     escape-string-regexp "^1.0.2"
+
+try-json-parse@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/try-json-parse/-/try-json-parse-0.1.1.tgz#8db01622e877e51b83140caee7c80864ad390c82"
 
 tsscmp@1.0.5:
   version "1.0.5"

@@ -19,6 +19,7 @@ var cleanCSS = require('gulp-clean-css');
 var NpmImportPlugin = require("less-plugin-npm-import");
 var npmImport = new NpmImportPlugin();
 var pxtorem = require('postcss-pxtorem');
+var cache = require('gulp-cache');
 
 var path = {
 	src: 'src/',
@@ -27,7 +28,7 @@ var path = {
 
 gulp.task('images', function() {
 	return gulp.src(path.src + 'img/**/*.*')
-		.pipe(imagemin())
+		.pipe(cache(imagemin()))
 		.pipe(gulp.dest(path.destination + 'img/'))
 		.pipe(connect.reload());
 });
@@ -158,6 +159,10 @@ gulp.task('watch', function() {
 gulp.task('clean', function () {
 	return gulp.src(path.destination, {read: false})
 		.pipe(clean());
+});
+
+gulp.task('nocache', function () {
+    return cache.clearAll();
 });
 
 gulp.task('default', gulpsync.sync([

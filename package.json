@@ -34,6 +34,7 @@
     "normalize.css": "^7.0.0"
   },
   "dependencies": {
+    "gulp-cache": "^0.4.6",
     "postcss-pxtorem": "^4.0.1"
   }
 }
